@@ -3,112 +3,49 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Mobilno vzdrževanje - prijava okvare</title>
+<title>Mobilno vzdrževanje</title>
 <style>
-:root{--blue:#0067b1;--navy:#04395e;--bg:#f3f6f8;--card:#fff;--line:#dbe3e8;--text:#17232c;--muted:#667784;--green:#168a52;--red:#c73b3b;--amber:#f0a500}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif}.app{max-width:600px;margin:auto;min-height:100vh;background:#eef2f5}.top{background:linear-gradient(135deg,var(--navy),var(--blue));color:#fff;padding:20px 18px 26px}.brand{font-size:13px;letter-spacing:.14em;font-weight:700;opacity:.9}.slogan-mark{display:flex;align-items:stretch;margin:12px 0 4px 0;height:64px}.slogan-chevrons{display:flex;align-items:center;overflow:hidden;width:116px}.slogan-chevrons span{display:block;width:58px;height:64px;background:#79a42f;clip-path:polygon(0 0,48% 0,100% 50%,48% 100%,0 100%,52% 50%);margin-right:-13px}.slogan{display:flex;align-items:center;min-width:250px;padding:0 54px 0 58px;margin-left:-5px;background:#6f942f;color:#d8e0d4;font-size:26px;font-weight:300;line-height:1.05;letter-spacing:.01em;text-transform:uppercase;clip-path:polygon(0 0,88% 0,100% 50%,88% 100%,0 100%,12% 50%)}.top h1{margin:7px 0 4px;font-size:26px}.top p{margin:0;opacity:.85}.wrap{padding:14px;margin-top:-12px}.card{background:var(--card);border-radius:16px;padding:16px;margin-bottom:13px;box-shadow:0 3px 16px rgba(15,40,60,.08)}.step{display:flex;gap:10px;align-items:center;margin-bottom:12px}.badge{width:28px;height:28px;border-radius:50%;background:#e6f2fa;color:var(--blue);display:grid;place-items:center;font-weight:800}.step h2{font-size:17px;margin:0}.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}.field{margin:10px 0}.field label{display:block;font-size:12px;color:var(--muted);font-weight:700;margin-bottom:5px}.field input,.field textarea,.field select{width:100%;border:1px solid #cdd8df;border-radius:10px;padding:11px;background:#fff;font:inherit;color:var(--text)}textarea{min-height:92px;resize:vertical}.readonly{background:#f5f8fa!important}.primary,.secondary{width:100%;border:0;border-radius:11px;padding:13px;font-weight:800;font-size:15px;cursor:pointer}.primary{background:var(--blue);color:#fff}.secondary{background:#eaf2f7;color:var(--navy)}.success{background:#e9f7ef;color:#106c3e;border-left:4px solid var(--green);padding:12px;border-radius:9px;margin-top:12px}.hint{font-size:12px;color:var(--muted);margin-top:7px}.scanner{margin-top:12px;border-radius:14px;overflow:hidden;background:#081018;position:relative}#qrReader{width:100%;background:#081018}#qrReader video{width:100%!important;max-height:360px;object-fit:cover}.scanner-msg{padding:9px 11px;background:#edf7ee;color:#255c33;font-size:12px}.photo{border:2px dashed #bfd0db;border-radius:12px;padding:16px;text-align:center;background:#f9fbfc}.photo img{max-width:100%;max-height:230px;border-radius:9px;display:none;margin:10px auto 0}.hidden{display:none}.actions{display:grid;grid-template-columns:1fr 1fr;gap:10px}.status{font-weight:700}.footer{text-align:center;color:#71818c;font-size:11px;padding:4px 16px 20px}@media(max-width:420px){.row,.actions{grid-template-columns:1fr}.top h1{font-size:23px}}
+:root{--blue:#0067b1;--navy:#04395e;--bg:#f3f6f8;--card:#fff;--line:#dbe3e8;--text:#17232c;--muted:#667784;--green:#168a52;--red:#c73b3b}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif}.app{max-width:600px;margin:auto;min-height:100vh;background:#eef2f5}.top{background:linear-gradient(135deg,var(--navy),var(--blue));color:#fff;padding:20px 18px 26px}.brand{font-size:13px;letter-spacing:.14em;font-weight:700;opacity:.9}.top h1{margin:7px 0 4px;font-size:26px}.top p{margin:0;opacity:.85}.wrap{padding:14px;margin-top:-12px}.card{background:var(--card);border-radius:16px;padding:16px;margin-bottom:13px;box-shadow:0 3px 16px rgba(15,40,60,.08)}.step{display:flex;gap:10px;align-items:center;margin-bottom:12px}.badge{width:28px;height:28px;border-radius:50%;background:#e6f2fa;color:var(--blue);display:grid;place-items:center;font-weight:800}.step h2{font-size:17px;margin:0}.field{margin:10px 0}.field label{display:block;font-size:12px;color:var(--muted);font-weight:700;margin-bottom:5px}.field input,.field textarea,.field select{width:100%;border:1px solid #cdd8df;border-radius:10px;padding:11px;background:#fff;font:inherit;color:var(--text)}textarea{min-height:105px;resize:vertical}.readonly{background:#f5f8fa!important}.primary,.secondary{width:100%;border:0;border-radius:11px;padding:13px;font-weight:800;font-size:15px;cursor:pointer}.primary{background:var(--blue);color:#fff}.secondary{background:#eaf2f7;color:var(--navy)}.success{background:#e9f7ef;color:#106c3e;border-left:4px solid var(--green);padding:12px;border-radius:9px;margin-top:12px}.hint{font-size:12px;color:var(--muted);margin-top:7px}.hidden{display:none}.scanner{margin-top:12px;border-radius:14px;overflow:hidden;background:#081018}#qrReader{width:100%;background:#081018}#qrReader video{width:100%!important;max-height:360px;object-fit:cover}.scanner-msg{padding:9px 11px;background:#edf7ee;color:#255c33;font-size:12px}.photo{border:2px dashed #bfd0db;border-radius:12px;padding:16px;text-align:center;background:#f9fbfc}.photo input{max-width:100%;margin-top:12px}.photo img{max-width:100%;max-height:300px;border-radius:10px;display:none;margin:12px auto 0}.photo-meta{font-size:12px;color:var(--muted);margin-top:8px}.actions{display:grid;grid-template-columns:1fr 1fr;gap:10px}.status{font-weight:800;font-size:16px}.footer{text-align:center;color:#71818c;font-size:11px;padding:4px 16px 20px}@media(max-width:420px){.actions{grid-template-columns:1fr}.top h1{font-size:23px}}
 </style>
 </head>
 <body>
 <div class="app">
-  <header class="top"><div class="brand">MOBILNO VZDRŽEVANJE</div><h1>Prijava okvare</h1><p>Mobilni prototip za kreiranje SAP PM obvestila</p></header>
-  <main class="wrap">
-    <section class="card">
-      <div class="step"><div class="badge">1</div><h2>Identifikacija opreme</h2></div>
-      <button class="primary" id="scanBtn" type="button">▣ Skeniraj QR kodo</button><div id="scanner" class="scanner hidden"><div id="qrReader"></div><div id="scanMsg" class="scanner-msg" aria-live="polite">Usmeri kamero v QR kodo.</div></div>
-      <div class="hint">Demo skeniranje napolni primer opreme. V produkciji se podatki preverijo v SAP-u.</div>
-      <div id="equipment" class="hidden">
-        <div class="row">
-          <div class="field"><label>Številka opreme</label><input id="equnr" class="readonly" readonly></div>
-          <div class="field"><label>Obrat</label><input id="iwerk" class="readonly" readonly></div>
-        </div>
-        <div class="field"><label>Tehnično mesto</label><input id="tplnr" class="readonly" readonly></div>
-        <div class="field"><label>Opis tehničnega mesta / opreme</label><input id="pltxt" class="readonly" readonly></div>
-      </div>
-    </section>
-
-    <section class="card">
-      <div class="step"><div class="badge">2</div><h2>Podatki o okvari</h2></div>
-      <div class="field"><label>Kratek opis</label><input id="qmtxt" maxlength="40" value="OKVARA NA INŠTALACIJI"></div>
-      <div class="field"><label>Opis ugotovitve</label><textarea id="longtext">Pri rednem obhodu je bila ugotovljena poškodba električne inštalacije na območju naprave. Na delu kabelske povezave so vidni znaki obrabe in poškodbe zaščitnega ovoja. Potreben je pregled in odprava napake s strani vzdrževanja.</textarea></div>
-      <div class="row">
-        <div class="field"><label>Vrsta obvestila</label><select id="qmart"><option value="ZO">ZO</option></select></div>
-        <div class="field"><label>Prioriteta</label><select id="priority"><option value="1">1 - Zelo visoka</option><option value="2">2 - Visoka</option><option value="3" selected>3 - Srednje</option><option value="4">4 - Nizka</option></select></div>
-      </div>
-      <div class="field"><label>Obvestilo kreiral</label><input id="reportedby" placeholder="Ime in priimek"></div>
-    </section>
-
-    <section class="card">
-      <div class="step"><div class="badge">3</div><h2>Fotografija okvare</h2></div>
-      <div class="photo"><strong>Dodaj fotografijo</strong><div class="hint">Na telefonu se odpre kamera ali izbor fotografije.</div><input id="photo" type="file" accept="image/*" capture="environment" style="margin-top:12px"><img id="preview" alt="Predogled fotografije"></div>
-    </section>
-
-    <section class="card">
-      <div class="step"><div class="badge">4</div><h2>Kreiraj SAP obvestilo</h2></div>
-      <div class="actions"><button class="secondary" id="clearBtn" type="button">Počisti</button><button class="primary" id="sendBtn" type="button">Kreiraj SAP obvestilo</button></div>
-      <div id="result" aria-live="polite"></div>
-    </section>
-  </main>
-  <div class="footer">DEMO prototip · brez dejanske povezave s SAP-om</div>
+<header class="top"><div class="brand">MOBILNO VZDRŽEVANJE</div><h1>Prijava okvare</h1><p>Demo mobilne prijave okvare</p></header>
+<main class="wrap">
+<section class="card">
+<div class="step"><div class="badge">1</div><h2>Skeniraj QR kodo</h2></div>
+<button class="primary" id="scanBtn" type="button">▣ Skeniraj QR kodo</button>
+<div id="scanner" class="scanner hidden"><div id="qrReader"></div><div id="scanMsg" class="scanner-msg" aria-live="polite">Usmeri zadnjo kamero v QR kodo.</div></div>
+<div id="equipment" class="hidden">
+<div class="field"><label>Prebrani QR podatki</label><textarea id="qrData" class="readonly" readonly></textarea></div>
 </div>
+</section>
+<section class="card">
+<div class="step"><div class="badge">2</div><h2>Opis napake</h2></div>
+<div class="field"><label>Kratek opis</label><input id="qmtxt" maxlength="40" placeholder="Vnesi kratek opis napake"></div>
+<div class="field"><label>Opis ugotovitve</label><textarea id="longtext" placeholder="Opiši ugotovljeno napako oziroma stanje na obhodu"></textarea></div>
+<div class="field"><label>Prioriteta</label><select id="priority"><option value="">Izberi prioriteto</option><option value="1">1 - Zelo visoka</option><option value="2">2 - Visoka</option><option value="3">3 - Srednje</option><option value="4">4 - Nizka</option></select></div>
+<div class="field"><label>Obvestilo kreiral</label><input id="reportedby" placeholder="Ime in priimek"></div>
+</section>
+<section class="card">
+<div class="step"><div class="badge">3</div><h2>Fotografija okvare</h2></div>
+<div class="photo"><strong>Fotografiraj ali naloži fotografijo</strong><div class="hint">Na telefonu lahko izbereš kamero ali obstoječo fotografijo.</div><input id="photo" type="file" accept="image/*" capture="environment"><div id="photoMeta" class="photo-meta"></div><img id="preview" alt="Predogled fotografije"></div>
+</section>
+<section class="card">
+<div class="step"><div class="badge">4</div><h2>Kreiraj SAP obvestilo</h2></div>
+<div class="actions"><button class="secondary" id="clearBtn" type="button">Počisti</button><button class="primary" id="sendBtn" type="button">Kreiraj SAP obvestilo</button></div>
+<div id="result" aria-live="polite"></div>
+</section>
+</main><div class="footer">DEMO prototip · brez dejanske povezave s SAP-om</div></div>
 <script src="https://unpkg.com/html5-qrcode@2.3.8/html5-qrcode.min.js"></script>
 <script>
-const $=id=>document.getElementById(id);
-let html5Qr=null;
-function parseQR(raw){
-  raw=(raw||'').trim(); const out={};
-  try{const u=new URL(raw); u.searchParams.forEach((v,k)=>out[k.toUpperCase()]=v);}catch(e){
-    raw.split(/[;|\n,&]+/).forEach(part=>{const m=part.trim().match(/^\s*([A-Za-z_]+)\s*[:=]\s*(.+?)\s*$/);if(m)out[m[1].toUpperCase()]=m[2];});
-    if(!Object.keys(out).length && raw) out.EQUNR=raw;
-  }
-  return out;
-}
-function applyQR(raw){
-  const d=parseQR(raw);
-  $('equnr').value=d.EQUNR||d.OPREMA||'';
-  $('tplnr').value=d.TPLNR||d.LOKACIJA||'';
-  $('iwerk').value=d.IWERK||d.OBRAT||'';
-  $('pltxt').value=d.PLTXT||d.OPIS||'';
-  $('equipment').classList.remove('hidden');
-  $('scanBtn').textContent='✓ QR koda prebrana';
-  stopScanner();
-}
-async function stopScanner(){
-  if(html5Qr){
-    try{if(html5Qr.isScanning) await html5Qr.stop();}catch(e){}
-    try{await html5Qr.clear();}catch(e){}
-    html5Qr=null;
-  }
-  $('scanner').classList.add('hidden');
-}
-async function startScanner(){
-  if(!window.isSecureContext){alert('Za kamero mora biti stran odprta prek HTTPS.');return;}
-  if(typeof Html5Qrcode==='undefined'){alert('QR knjižnice ni bilo mogoče naložiti. Preveri internetno povezavo.');return;}
-  await stopScanner();
-  $('scanner').classList.remove('hidden');
-  $('scanMsg').textContent='Usmeri zadnjo kamero v QR kodo.';
-  html5Qr=new Html5Qrcode('qrReader', {formatsToSupport:[Html5QrcodeSupportedFormats.QR_CODE], verbose:false});
-  try{
-    await html5Qr.start(
-      {facingMode:'environment'},
-      {fps:10, qrbox:{width:250,height:250}, aspectRatio:1.0},
-      decodedText=>applyQR(decodedText),
-      ()=>{}
-    );
-  }catch(e){
-    await stopScanner();
-    alert('Kamere ni bilo mogoče odpreti. Dovoli uporabo kamere in stran odpri prek HTTPS.');
-  }
-}
+const $=id=>document.getElementById(id);let html5Qr=null;
+async function stopScanner(){if(html5Qr){try{if(html5Qr.isScanning)await html5Qr.stop()}catch(e){}try{await html5Qr.clear()}catch(e){}html5Qr=null}$('scanner').classList.add('hidden')}
+async function startScanner(){if(!window.isSecureContext){alert('Za uporabo kamere mora biti stran odprta prek HTTPS.');return}if(typeof Html5Qrcode==='undefined'){alert('QR knjižnice ni bilo mogoče naložiti.');return}await stopScanner();$('scanner').classList.remove('hidden');html5Qr=new Html5Qrcode('qrReader',{formatsToSupport:[Html5QrcodeSupportedFormats.QR_CODE],verbose:false});try{await html5Qr.start({facingMode:'environment'},{fps:10,qrbox:{width:250,height:250}},text=>{ $('qrData').value=text;$('equipment').classList.remove('hidden');$('scanBtn').textContent='✓ QR koda prebrana';stopScanner()},()=>{})}catch(e){await stopScanner();alert('Kamere ni bilo mogoče odpreti. Preveri dovoljenje za kamero.')}}
 $('scanBtn').addEventListener('click',startScanner);
-$('photo').addEventListener('change',e=>{const f=e.target.files&&e.target.files[0];if(!f){$('preview').style.display='none';return}const r=new FileReader();r.onload=()=>{$('preview').src=r.result;$('preview').style.display='block'};r.readAsDataURL(f)});
-$('clearBtn').addEventListener('click',()=>{stopScanner();['equnr','iwerk','tplnr','pltxt','reportedby'].forEach(x=>$(x).value='');$('equipment').classList.add('hidden');$('scanBtn').textContent='▣ Skeniraj QR kodo';$('photo').value='';$('preview').style.display='none';$('result').innerHTML=''});
-$('sendBtn').addEventListener('click',()=>{
-  if(!$('equnr').value&&!$('tplnr').value){$('result').innerHTML='<div class="success" style="border-color:#c73b3b;background:#fff0f0;color:#8c2525">Najprej skeniraj QR kodo opreme.</div>';return}
-  if(!$('qmtxt').value.trim()){ $('result').innerHTML='<div class="success" style="border-color:#c73b3b;background:#fff0f0;color:#8c2525">Vnesi kratek opis okvare.</div>';return }
-  const no='10020'+String(Math.floor(9000+Math.random()*999));
-  $('result').innerHTML='<div class="success"><div class="status">✓ SAP obvestilo pripravljeno</div>DEMO: SAP PM obvestilo <strong>'+no+'</strong> bi bilo kreirano. Fotografija bi bila dodana e-poštnemu obvestilu.</div>';
-});
+$('photo').addEventListener('change',e=>{const f=e.target.files&&e.target.files[0];if(!f){$('preview').style.display='none';$('photoMeta').textContent='';return}if(!f.type.startsWith('image/')){alert('Izberi fotografijo.');e.target.value='';return}const max=15*1024*1024;if(f.size>max){alert('Fotografija je večja od 15 MB. Izberi manjšo fotografijo.');e.target.value='';return}$('photoMeta').textContent=f.name+' · '+(f.size/1024/1024).toFixed(2)+' MB';const r=new FileReader();r.onload=()=>{$('preview').src=r.result;$('preview').style.display='block'};r.readAsDataURL(f)});
+$('clearBtn').addEventListener('click',async()=>{await stopScanner();$('qrData').value='';$('equipment').classList.add('hidden');$('scanBtn').textContent='▣ Skeniraj QR kodo';$('qmtxt').value='';$('longtext').value='';$('priority').value='';$('reportedby').value='';$('photo').value='';$('photoMeta').textContent='';$('preview').removeAttribute('src');$('preview').style.display='none';$('result').innerHTML=''});
+$('sendBtn').addEventListener('click',()=>{if(!$('qrData').value.trim()){$('result').innerHTML='<div class="success" style="border-color:#c73b3b;background:#fff0f0;color:#8c2525">Najprej skeniraj QR kodo.</div>';return}if(!$('qmtxt').value.trim()){$('result').innerHTML='<div class="success" style="border-color:#c73b3b;background:#fff0f0;color:#8c2525">Vnesi kratek opis napake.</div>';return}if(!$('photo').files.length){$('result').innerHTML='<div class="success" style="border-color:#c73b3b;background:#fff0f0;color:#8c2525">Dodaj fotografijo okvare.</div>';return}$('result').innerHTML='<div class="success"><div class="status">✓ SAP obvestilo 1000123 je bilo uspešno kreirano.</div><div style="margin-top:5px">Fotografija je bila uspešno pripravljena za pošiljanje.</div></div>';});
 window.addEventListener('pagehide',stopScanner);
 </script>
-</body>
-</html>
+</body></html>
